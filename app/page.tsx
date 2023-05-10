@@ -1,23 +1,29 @@
-import classes from '../css/Page.module.css';
+import React from 'react';
 
-function Page() {
-  return (
-    <main className={classes.main}>
-      <h1 className={classes.title}>Welcome to Template!</h1>
+import {
+  AboutUs,
+  Chef,
+  FindUs,
+  Footer,
+  Gallery,
+  Header,
+  SpecialMenu,
+} from '../container';
+import { Navbar } from '../components';
 
-      <p className={classes.description}>
-        Get started by editing
-        <code className={classes.code}>app/page.tsx</code>
-      </p>
+import './page.css';
 
-      <div className={classes.grid}>
-        <div className={classes.card}>
-          <h2>Nice cards &rarr;</h2>
-          <p>Edit template</p>
-        </div>
-      </div>
-    </main>
-  );
-}
+const page: React.FC = () => (
+  <div>
+    <Navbar />
+    <Header />
+    <AboutUs />
+    <SpecialMenu />
+    <Chef />
+    <Gallery />
+    <FindUs />
+    <Footer />
+  </div>
+);
 
-export default Page;
+export default page;
