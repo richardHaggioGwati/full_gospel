@@ -1,9 +1,7 @@
-import React from 'react';
-
 import SubHeading from '../SubHeading/SubHeading';
 import './Newsletter.css';
 
-const Newsletter = () => (
+const Newsletter: React.FC = () => (
   <div className="app__newsletter">
     <div className="app__newsletter-heading">
       <SubHeading title="Send a Email" />

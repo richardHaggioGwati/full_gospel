@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
-import { SubHeading, MenuItem } from '../../components';
+import { SubHeading, MinistryItem } from '../../components';
 import { data, images } from '../../constants';
-import './SpecialMenu.css';
+import './AreaOfMinistry.css';
 
-const SpecialMenu = () => (
+const AreaOfMinistry = () => (
   <div className="app__specialMenu flex__center section__padding" id="ministry">
     <div className="app__specialMenu-title">
       <SubHeading title="Jesus Christ that saves all." />
@@ -16,12 +16,7 @@ const SpecialMenu = () => (
         <p className="app__specialMenu-menu_heading">Evangelism</p>
         <div className="app__specialMenu_menu_items">
           {data.evangelism.map((evan, index) => (
-            <MenuItem
-              key={`${evan.title + index}`}
-              title={evan.title}
-              price={evan.verse}
-              tags={evan.info}
-            />
+            <MinistryItem key={`${evan.title + index}`} prop={evan} />
           ))}
         </div>
       </div>
@@ -43,12 +38,7 @@ const SpecialMenu = () => (
         </p>
         <div className="app__specialMenu_menu_items">
           {data.praise.map((praises, index) => (
-            <MenuItem
-              key={`${praises.title + index}`}
-              title={praises.title}
-              price={praises.verse}
-              tags={praises.info}
-            />
+            <MinistryItem key={`${praises.title + index}`} prop={praises} />
           ))}
         </div>
       </div>
@@ -62,4 +52,4 @@ const SpecialMenu = () => (
   </div>
 );
 
-export default SpecialMenu;
+export default AreaOfMinistry;

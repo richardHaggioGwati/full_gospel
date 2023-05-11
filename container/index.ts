@@ -1,9 +1,9 @@
 import AboutUs from './AboutUs/AboutUs';
-import Chef from './Chef/Chef';
+import Pastor from './Pastor/Pastor';
 import FindUs from './Findus/FindUs';
 import Footer from './Footer/Footer';
 import Gallery from './Gallery/Gallery';
 import Header from './Header/Header';
-import SpecialMenu from './Menu/SpecialMenu';
+import AreaOfMinistry from './Ministry/AreaOfMinistry';
 
-export { AboutUs, Chef, FindUs, Footer, Gallery, Header, SpecialMenu };
+export { AboutUs, Pastor, FindUs, Footer, Gallery, Header, AreaOfMinistry };

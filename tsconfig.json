@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "components/SubHeading/SubHeading.jsx"  ],
+, "components/SubHeading/SubHeading.tsx"  ],
   "exclude": [
     "node_modules"
   ]

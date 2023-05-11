@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 import { SubHeading } from '../../components';
 import { images } from '../../constants';
-import './Chef.css';
+import './Pastor.css';
 
-const Chef = () => (
+const Pastor: React.FC = () => (
   <div className="app__bg app__wrapper section__padding">
     <div className="app__wrapper_img app__wrapper_img-reverse">
       <Image
@@ -62,4 +62,4 @@ const Chef = () => (
   </div>
 );
 
-export default Chef;
+export default Pastor;

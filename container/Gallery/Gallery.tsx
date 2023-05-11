@@ -14,9 +14,10 @@ import { images } from '../../constants';
 import './Gallery.css';
 
 const Gallery = () => {
-  const scrollRef = useRef(null);
+  // TODO: Remove type any
+  const scrollRef = useRef<any>();
 
-  const scroll = (direction) => {
+  const scroll = (direction: string) => {
     const { current } = scrollRef;
 
     if (direction === 'left') {

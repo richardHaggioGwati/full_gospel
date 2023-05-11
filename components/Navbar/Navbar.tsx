@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdGridGoldenratio } from 'react-icons/md';
+import Link from 'next/link';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
@@ -15,26 +16,26 @@ const Navbar = () => {
       </div>
       <ul className="app__navbar-links">
         <li className="p__opensans">
-          <a href="#home">Home</a>
+          <Link href="#home">Home</Link>
         </li>
         <li className="p__opensans">
-          <a href="#about">About</a>
+          <Link href="#about">About</Link>
         </li>
         <li className="p__opensans">
-          <a href="#menu">Gallery</a>
+          <Link href="#menu">Gallery</Link>
         </li>
         <li className="p__opensans">
-          <a href="#awards">Donate</a>
+          <Link href="#awards">Donate</Link>
         </li>
       </ul>
       <div className="app__navbar-login">
-        <a href="#login" className="p__opensans">
+        <Link href="#login" className="p__opensans">
           Areas Of Ministry
-        </a>
+        </Link>
         <div />
-        <a href="#contact" className="p__opensans">
+        <Link href="#contact" className="p__opensans">
           Contact
-        </a>
+        </Link>
       </div>
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
@@ -51,34 +52,34 @@ const Navbar = () => {
             />
             <ul className="app__navbar-smallscreen_links">
               <li>
-                <a href="#home" onClick={() => setToggleMenu(false)}>
+                <Link href="#home" onClick={() => setToggleMenu(false)}>
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" onClick={() => setToggleMenu(false)}>
+                <Link href="#about" onClick={() => setToggleMenu(false)}>
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" onClick={() => setToggleMenu(false)}>
+                <Link href="#gallery" onClick={() => setToggleMenu(false)}>
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#ministry" onClick={() => setToggleMenu(false)}>
+                <Link href="#ministry" onClick={() => setToggleMenu(false)}>
                   Ministry
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#findus" onClick={() => setToggleMenu(false)}>
+                <Link href="#findus" onClick={() => setToggleMenu(false)}>
                   Find us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" onClick={() => setToggleMenu(false)}>
+                <Link href="#contact" onClick={() => setToggleMenu(false)}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

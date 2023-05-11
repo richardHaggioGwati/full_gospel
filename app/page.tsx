@@ -1,29 +1,29 @@
-import React from 'react';
+import { Suspense } from 'react';
 
 import {
   AboutUs,
-  Chef,
+  Pastor,
   FindUs,
   Footer,
   Gallery,
   Header,
-  SpecialMenu,
+  AreaOfMinistry,
 } from '../container';
-import { Navbar } from '../components';
+import { Navbar, Loader } from '../components';
 
 import './page.css';
 
 const page: React.FC = () => (
-  <div>
+  <Suspense fallback={<Loader />}>
     <Navbar />
     <Header />
     <AboutUs />
-    <SpecialMenu />
-    <Chef />
+    <AreaOfMinistry />
+    <Pastor />
     <Gallery />
     <FindUs />
     <Footer />
-  </div>
+  </Suspense>
 );
 
 export default page;

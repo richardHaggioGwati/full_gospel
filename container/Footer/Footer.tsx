@@ -1,9 +1,7 @@
 import React from 'react';
 import { FiFacebook, FiTwitter, FiInstagram } from 'react-icons/fi';
 
-import Image from 'next/image';
 import { FooterOverlay, Newsletter } from '../../components';
-import { images } from '../../constants';
 import './Footer.css';
 
 const Footer = () => (
@@ -29,7 +27,6 @@ const Footer = () => (
       </div>
 
       <div className="app__footer-links_logo">
-        <Image src={images.gericht} alt="footer_logo" />
         <p className="p__opensans">
           &quot;Where Jesus heals broken hearts and if your heart is broken,
           your are in the right place.&quot;
