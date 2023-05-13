@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Image from 'next/image';
-import { SubHeading } from '../../components';
-import { images } from '../../constants';
+import { SubHeading } from '../../../components';
+import { images } from '../../../constants';
 
 import './Header.css';
 

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import { SubHeading, MinistryItem } from '../../components';
-import { data, images } from '../../constants';
+import { SubHeading, MinistryItem } from '../../../components';
+import { data, images } from '../../../constants';
 import './AreaOfMinistry.css';
 
 const AreaOfMinistry = () => (

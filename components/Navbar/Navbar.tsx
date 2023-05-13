@@ -4,10 +4,27 @@ import { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdGridGoldenratio } from 'react-icons/md';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import './Navbar.css';
+
+const navItems = {
+  '/': {
+    name: 'home',
+  },
+  '#about': {
+    name: 'about',
+  },
+  '/gallery': {
+    name: 'gallery',
+  },
+  '#donate': {
+    name: 'donate',
+  },
+};
 
 const Navbar: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className="app__navbar">
@@ -15,27 +32,27 @@ const Navbar: React.FC = () => {
         <h1>FULL GOSPEL</h1>
       </div>
       <ul className="app__navbar-links">
-        <li className="p__opensans">
-          <Link href="#home">Home</Link>
-        </li>
-        <li className="p__opensans">
-          <Link href="#about">About</Link>
-        </li>
-        <li className="p__opensans">
-          <Link href="#menu">Gallery</Link>
-        </li>
-        <li className="p__opensans">
-          <Link href="#awards">Donate</Link>
-        </li>
+        {Object.entries(navItems).map(([path, { name }]) => {
+          const isActive = path === pathname;
+          return (
+            <li
+              key={path}
+              className={`p__opensans ${isActive ? 'activeLink' : ''}`}
+            >
+              <Link href={path}>{name}</Link>
+            </li>
+          );
+        })}
       </ul>
-      <div className="app__navbar-login">
-        <Link href="#login" className="p__opensans">
+
+      <div className="app__navbar-sider">
+        <a href="/ministry" className="p__opensans">
           Areas Of Ministry
-        </Link>
+        </a>
         <div />
-        <Link href="#contact" className="p__opensans">
+        <a href="#contact" className="p__opensans">
           Contact
-        </Link>
+        </a>
       </div>
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
@@ -52,34 +69,34 @@ const Navbar: React.FC = () => {
             />
             <ul className="app__navbar-smallscreen_links">
               <li>
-                <Link href="#home" onClick={() => setToggleMenu(false)}>
+                <a href="#home" onClick={() => setToggleMenu(false)}>
                   Home
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#about" onClick={() => setToggleMenu(false)}>
+                <a href="#about" onClick={() => setToggleMenu(false)}>
                   About
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#gallery" onClick={() => setToggleMenu(false)}>
+                <a href="#gallery" onClick={() => setToggleMenu(false)}>
                   Gallery
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#ministry" onClick={() => setToggleMenu(false)}>
+                <a href="#ministry" onClick={() => setToggleMenu(false)}>
                   Ministry
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#findus" onClick={() => setToggleMenu(false)}>
+                <a href="#findus" onClick={() => setToggleMenu(false)}>
                   Find us
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="#contact" onClick={() => setToggleMenu(false)}>
+                <a href="#contact" onClick={() => setToggleMenu(false)}>
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

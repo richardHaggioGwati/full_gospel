@@ -1,4 +1,7 @@
 import '../css/globals.css';
+import { Suspense } from 'react';
+import { Loader, Navbar } from '../components';
+import { Footer } from '../container/Home';
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -14,7 +17,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/logo.jpg" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Suspense fallback={<Loader />}>
+          <Navbar />
+          {children}
+          <Footer />
+        </Suspense>
+      </body>
     </html>
   );
 };
