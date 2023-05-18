@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Image from 'next/image';
 import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
@@ -18,9 +16,6 @@ const Header = () => (
         that fosters personal growth, deep connections with God, and meaningful
         engagement.
       </p>
-      <button type="button" className="custom__button">
-        Explore More
-      </button>
     </div>
 
     <div className="app__wrapper_img">

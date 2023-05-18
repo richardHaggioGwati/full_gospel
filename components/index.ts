@@ -5,6 +5,7 @@ import MinistryItem from './MinistryItem/MinistryItem';
 import Navbar from './Navbar/Navbar';
 import Loader from './Loader/Loader';
 import GalleryItem from './GalleryItem/GalleryItem';
+import AboutItem from './AboutItem/AboutItem';
 
 export {
   SubHeading,
@@ -14,4 +15,5 @@ export {
   Navbar,
   Loader,
   GalleryItem,
+  AboutItem,
 };

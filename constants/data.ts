@@ -59,4 +59,66 @@ const praise = [
   },
 ];
 
-export default { evangelism, praise };
+const objective = [
+  {
+    title: 'Winning the lost',
+    information: 'Through preaching the gospel and outreach programs.',
+  },
+  {
+    title: 'Engaging workshops',
+    information:
+      'Special meetings and workshops for the purpose of empowerment, both spiritual and economical.',
+  },
+  {
+    title: 'Family enrichment',
+    information:
+      'Seminars and workshops to enhance marriage and family enrichment.',
+  },
+  {
+    title: 'Youth Development',
+    information: 'Youth development programs',
+  },
+  {
+    title: 'discipleship',
+    information: 'To disciple and unleash untapped potential.',
+  },
+  {
+    title: 'praise and worship.',
+    information:
+      'Create an atmosphere for God to move in signs and wonders through intense prayer and praise and worship.',
+  },
+];
+
+const beliefs = [
+  {
+    title: 'praise and worship.',
+    information:
+      'We believe that the scriptures are divinely inspired and free from error.',
+  },
+  {
+    title: "Bible's authority",
+    information:
+      'We believe that the Bible is the supreme authority for faith and life.',
+  },
+  {
+    title: 'God',
+    information:
+      'We believe in one God, eternally existent In three persons: Father, Son and Holy Spirit.',
+  },
+  {
+    title: 'Jesus Christ',
+    information:
+      'We believe that Jesus Christ was begotten of the Father, conceived by the Holy Spirit, born of a virgin called Mary and is true God and true man.',
+  },
+  {
+    title: 'God created man',
+    information: 'We believe that God created man in His image and likeness.',
+  },
+  {
+    title: 'man and sin ',
+    information:
+      'We believe that man chose to sin and thus incurred the penalty, which was eternal separation from God.',
+  },
+];
+
+export default { evangelism, praise, objective, beliefs };

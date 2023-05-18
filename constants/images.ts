@@ -1,4 +1,5 @@
 import bg from '../assets/bg.png';
+import bible from '../assets/bible.png';
 import chef from '../assets/chef.png';
 import G from '../assets/G.png';
 import gallery01 from '../assets/gallery01.jpg';
@@ -12,10 +13,13 @@ import welcome from '../assets/welcome.png';
 import findus from '../assets/findus.png';
 import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
+import about from '../assets/about.svg';
+import donate from '../assets/donate.svg';
 
 export default {
   bg,
   chef,
+  bible,
   G,
   gallery01,
   gallery02,
@@ -28,4 +32,6 @@ export default {
   findus,
   sign,
   quote,
+  about,
+  donate,
 };

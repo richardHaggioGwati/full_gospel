@@ -11,14 +11,38 @@ const navItems = {
   '/': {
     name: 'home',
   },
-  '#about': {
+  '/about': {
     name: 'about',
   },
   '/gallery': {
     name: 'gallery',
   },
-  '#donate': {
+  '/donate': {
     name: 'donate',
+  },
+};
+
+const mobileNavigation = {
+  '/': {
+    name: 'home',
+  },
+  '/about': {
+    name: 'about',
+  },
+  '/gallery': {
+    name: 'gallery',
+  },
+  '/donate': {
+    name: 'donate',
+  },
+  '/ministry': {
+    name: 'ministry',
+  },
+  '#findus': {
+    name: 'find us',
+  },
+  '/contact': {
+    name: 'contact',
   },
 };
 
@@ -54,6 +78,7 @@ const Navbar: React.FC = () => {
           Contact
         </a>
       </div>
+
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu
           color="#fff"
@@ -68,36 +93,15 @@ const Navbar: React.FC = () => {
               onClick={() => setToggleMenu(false)}
             />
             <ul className="app__navbar-smallscreen_links">
-              <li>
-                <a href="#home" onClick={() => setToggleMenu(false)}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" onClick={() => setToggleMenu(false)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#gallery" onClick={() => setToggleMenu(false)}>
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#ministry" onClick={() => setToggleMenu(false)}>
-                  Ministry
-                </a>
-              </li>
-              <li>
-                <a href="#findus" onClick={() => setToggleMenu(false)}>
-                  Find us
-                </a>
-              </li>
-              <li>
-                <a href="#contact" onClick={() => setToggleMenu(false)}>
-                  Contact
-                </a>
-              </li>
+              {Object.entries(mobileNavigation).map(([path, { name }]) => {
+                return (
+                  <li key={path} className="p__opensans">
+                    <a href={path} onClick={() => setToggleMenu(false)}>
+                      {name}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         )}
