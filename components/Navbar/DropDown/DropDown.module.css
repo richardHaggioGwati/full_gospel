@@ -1,0 +1,12 @@
+.app__drop_down {
+    position: absolute;
+    top: 65px;
+    width: 300px;
+    transform: translateX(-45%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow: hiddem;
+    list-style: none;
+}

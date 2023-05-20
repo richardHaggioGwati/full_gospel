@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { MdGridGoldenratio } from 'react-icons/md';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import DropDown from './DropDown/DropDown';
 import './Navbar.css';
 
 const navItems = {
@@ -64,13 +65,11 @@ const Navbar: React.FC = () => {
       </ul>
 
       <div className="app__navbar-sider">
-        <a href="/ministry" className="p__opensans">
-          Areas Of Ministry
-        </a>
+        <DropDown />
         <div />
-        <a href="#contact" className="p__opensans">
+        <Link href="#contact" className="p__opensans">
           Contact
-        </a>
+        </Link>
       </div>
 
       <div className="app__navbar-smallscreen">
