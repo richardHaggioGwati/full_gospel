@@ -38,12 +38,6 @@ const mobileNavigation = {
   '/ministry': {
     name: 'ministry',
   },
-  '#findus': {
-    name: 'find us',
-  },
-  '/contact': {
-    name: 'contact',
-  },
 };
 
 const Navbar: React.FC = () => {
@@ -96,9 +90,9 @@ const Navbar: React.FC = () => {
               {Object.entries(mobileNavigation).map(([path, { name }]) => {
                 return (
                   <li key={path} className="p__opensans">
-                    <a href={path} onClick={() => setToggleMenu(false)}>
+                    <Link href={path} onClick={() => setToggleMenu(false)}>
                       {name}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

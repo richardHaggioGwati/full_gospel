@@ -49,8 +49,15 @@ const Footer = () => (
 
     <div className="footer__copyright">
       <p className="p__opensans">
-        2023 The Full Gospel Church. All Rights reserved. Designed by richard
-        gwati
+        2023 The Full Gospel Church. All Rights reserved. Designed by{' '}
+        <a
+          href="https://react-portfolio-lovat-one.vercel.app/"
+          rel="noreferrer"
+          target="_blank"
+          style={{ color: '#DCCA87' }}
+        >
+          richard gwati
+        </a>
       </p>
     </div>
   </div>
