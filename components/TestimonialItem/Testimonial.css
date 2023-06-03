@@ -1,0 +1,137 @@
+img,
+picture {
+  max-width: 100%;
+}
+
+/* utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+.bg-secondary-400 {
+  background: hsl(217 19% 35%);
+}
+.bg-secondary-500 {
+  background: hsl(219 29% 14%);
+}
+
+.bg-neutral-100 {
+  background: hsl(0 0% 100%);
+}
+
+.text-neutral-100 {
+  color: hsl(0 0% 100%);
+}
+.text-secondary-400 {
+  color: hsl(217 19% 35%);
+}
+.border-primary-400 {
+  border: 2px solid #a775f1;
+}
+
+/* components */
+.testimonial-grid {
+  display: grid;
+  gap: 1.8rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+
+  padding-block: 2rem;
+  width: min(95%, 85rem);
+  margin-inline: auto;
+}
+
+.testimonial {
+  font-size: 0.8125rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media screen and (min-width: 33em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one'
+      'two three'
+      'five five'
+      'four four';
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one'
+      'two five'
+      'three five'
+      'four four';
+  }
+}
+
+@media screen and (min-width: 54em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one two'
+      'five five five'
+      'three four four';
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+  }
+}
+
+.testimonial img {
+  width: 2.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.testimonial .name {
+  font-size: 650;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.testimonial .position {
+  font-size: 0.8125rem;
+  opacity: 0.4;
+}
+
+.testimonial > p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.testimonial > p:last-of-type {
+  font-size: 0.9125rem;
+  opacity: 0.7;
+}

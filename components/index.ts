@@ -6,6 +6,7 @@ import Navbar from './Navbar/Navbar';
 import Loader from './Loader/Loader';
 import GalleryItem from './GalleryItem/GalleryItem';
 import AboutItem from './AboutItem/AboutItem';
+import TestimonialItem from './TestimonialItem/TestimonialItem';
 
 export {
   SubHeading,
@@ -16,4 +17,5 @@ export {
   Loader,
   GalleryItem,
   AboutItem,
+  TestimonialItem,
 };

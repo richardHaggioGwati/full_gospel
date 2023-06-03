@@ -49,7 +49,7 @@ const Footer = () => (
 
     <div className="footer__copyright">
       <p className="p__opensans">
-        2023 The Full Gospel Church. All Rights reserved. Designed by{' '}
+        2023 The Full Gospel Church. All Rights reserved. Made with Love by{' '}
         <a
           href="https://react-portfolio-lovat-one.vercel.app/"
           rel="noreferrer"

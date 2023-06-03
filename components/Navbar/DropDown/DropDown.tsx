@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { FaCaretDown } from 'react-icons/fa';
 import Link from 'next/link';
 import styles from './DropDown.module.css';
@@ -24,12 +24,24 @@ const dropDown = {
   },
 };
 
-const DropDownItem = () => {
+interface DropDownOptions {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const DropDownItem: React.FC<DropDownOptions> = ({ open, setOpen }) => {
   return (
     <ul className={styles.app__drop_down}>
       {Object.entries(dropDown).map(([path, { name }]) => {
         return (
-          <li key={path} className="p__opensans">
+          <li
+            key={path}
+            onClick={() => setOpen(!open)}
+            className="p__opensans"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
+            role="button"
+            aria-hidden="true"
+          >
             <Link href={path}>{name}</Link>
           </li>
         );
@@ -50,7 +62,7 @@ const DropDown: React.FC = () => {
       >
         Areas Of Ministry <FaCaretDown />
       </button>
-      {open ? <DropDownItem /> : ''}
+      {open ? <DropDownItem open={open} setOpen={setOpen} /> : ''}
     </>
   );
 };

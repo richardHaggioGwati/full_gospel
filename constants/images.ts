@@ -15,6 +15,7 @@ import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import about from '../assets/about.svg';
 import donate from '../assets/donate.svg';
+import banner from '../assets/testimonial/banner.jpg';
 
 export default {
   bg,
@@ -34,4 +35,5 @@ export default {
   quote,
   about,
   donate,
+  banner,
 };

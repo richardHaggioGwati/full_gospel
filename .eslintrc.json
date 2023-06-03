@@ -49,6 +49,7 @@
         "skipUndeclared": null
       }
     ],
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "no-noninteractive-element-to-interactive-role": "off"
   }
 }
