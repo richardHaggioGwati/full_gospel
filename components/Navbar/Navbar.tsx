@@ -6,7 +6,7 @@ import { MdGridGoldenratio } from 'react-icons/md';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import DropDown from './DropDown/DropDown';
-import './Navbar.css';
+import styles from './Navbar.module.css';
 
 const navItems = {
   '/': {
@@ -36,8 +36,23 @@ const mobileNavigation = {
   '/donate': {
     name: 'donate',
   },
-  '/ministry': {
-    name: 'ministry',
+  '/ministry/evangelism': {
+    name: 'Evangelism',
+  },
+  '/ministry/help': {
+    name: 'Ministry of Helps',
+  },
+  '/ministry/band': {
+    name: 'Praise And Worship',
+  },
+  '/ministry/school': {
+    name: 'Shalom Sunday School',
+  },
+  '/ministry/women': {
+    name: 'Women Of Destiny',
+  },
+  '/ministry/youth': {
+    name: 'Yahweh Youth',
   },
 };
 
@@ -46,17 +61,17 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="app__navbar">
-      <div className="app__navbar-logo">
+    <nav className={styles.app__navbar}>
+      <div className={styles.app__navbar_logo}>
         <h1>FULL GOSPEL</h1>
       </div>
-      <ul className="app__navbar-links">
+      <ul className={styles.app__navbar_links}>
         {Object.entries(navItems).map(([path, { name }]) => {
           const isActive = path === pathname;
           return (
             <li
               key={path}
-              className={`p__opensans ${isActive ? 'activeLink' : ''}`}
+              className={`p__opensans ${isActive ? styles.activeLink : ''}`}
             >
               <Link href={path}>{name}</Link>
             </li>
@@ -64,7 +79,7 @@ const Navbar: React.FC = () => {
         })}
       </ul>
 
-      <div className="app__navbar-sider">
+      <div className={styles.app__navbar_sider}>
         <DropDown />
         <div />
         <Link href="#contact" className="p__opensans">
@@ -72,20 +87,22 @@ const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="app__navbar-smallscreen">
+      <div className={styles.app__navbar_smallscreen}>
         <GiHamburgerMenu
           color="#fff"
           fontSize={27}
           onClick={() => setToggleMenu(true)}
         />
         {toggleMenu && (
-          <div className="app__navbar-smallscreen_overlay flex__center slide-bottom">
+          <div
+            className={`${styles.app__navbar_smallscreen_overlay} flex__center slide-bottom`}
+          >
             <MdGridGoldenratio
               fontSize={27}
-              className="overlay__close"
+              className={styles.overlay__close}
               onClick={() => setToggleMenu(false)}
             />
-            <ul className="app__navbar-smallscreen_links">
+            <ul className={styles.app__navbar_smallscreen_links}>
               {Object.entries(mobileNavigation).map(([path, { name }]) => {
                 return (
                   <li key={path} className="p__opensans">

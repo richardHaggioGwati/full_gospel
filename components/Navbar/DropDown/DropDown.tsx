@@ -29,6 +29,7 @@ interface DropDownOptions {
   setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
+// TODO: ADD MODAL FOR CLOSING
 const DropDownItem: React.FC<DropDownOptions> = ({ open, setOpen }) => {
   return (
     <ul className={styles.app__drop_down}>
