@@ -1,4 +1,4 @@
-import './MinistryItem.css';
+import styles from './MinistryItem.module.css';
 
 interface MinistryItemProp {
   prop: {
@@ -11,20 +11,20 @@ interface MinistryItemProp {
 const MinistryItem: React.FC<MinistryItemProp> = ({
   prop: { title, verse, information },
 }) => (
-  <div className="app__menuitem">
-    <div className="app__menuitem-head">
-      <div className="app__menuitem-name">
+  <div className={styles.app__menuitem}>
+    <div className={styles.app__menuitem_head}>
+      <div className={styles.app__menuitem_name}>
         <p className="p__cormorant" style={{ color: '#DCCA87' }}>
           {title}
         </p>
       </div>
-      <div className="app__menuitem-dash" />
-      <div className="app__menuitem-price">
+      <div className={styles.app__menuitem_dash} />
+      <div className={styles.app__menuitem_price}>
         <p className="p__cormorant">{verse}</p>
       </div>
     </div>
 
-    <div className="app__menuitem-sub">
+    <div className={styles.app__menuitem_sub}>
       <p className="p__opensans" style={{ color: '#AAAAAA' }}>
         {information}
       </p>
