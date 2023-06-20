@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import SubHeading from '../SubHeading/SubHeading';
 import Loader from '../Loader/Loader';
-import './Newsletter.css';
+import styles from './Newsletter.module.css';
 
 const Newsletter: React.FC = () => {
   const [userInputEmail, setUserInputEmail] = useState('');
@@ -71,8 +71,8 @@ const Newsletter: React.FC = () => {
       {isSubmitting ? (
         <Loader />
       ) : (
-        <div className="app__newsletter">
-          <div className="app__newsletter-heading">
+        <div className={styles.app__newsletter}>
+          <div className={styles.app__newsletter_heading}>
             <SubHeading title="Send a Email" />
             <h1 className="headtext__cormorant">enter your email</h1>
             <p className="p__opensans">
@@ -80,19 +80,19 @@ const Newsletter: React.FC = () => {
             </p>
           </div>
           <form
-            className="app__newsletter-input flex__center"
+            className={`${styles.app__newsletter_input} flex__center`}
             onSubmit={handleSubmit}
           >
             <input
               type="text"
-              className="app__newsletter_name_input"
+              className={styles.app__newsletter_name_input}
               placeholder="Enter your name"
               value={userInputName}
               onChange={handleNameChange}
             />
             <input
               type="email"
-              className="app__newsletter_email_input"
+              className={styles.app__newsletter_email_input}
               placeholder="Enter your email address"
               value={userInputEmail}
               onChange={handleEmailChange}
