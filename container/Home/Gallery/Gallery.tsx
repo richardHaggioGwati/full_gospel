@@ -12,7 +12,8 @@ import {
 
 import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
-import './Gallery.css';
+
+import styles from '../../Shared/GallerySlider.module.css';
 
 const Gallery = () => {
   // TODO: Remove type any
@@ -35,8 +36,8 @@ const Gallery = () => {
   };
 
   return (
-    <div className="app__gallery flex__center">
-      <div className="app__gallery-content">
+    <div className={`${styles.app__gallery} flex__center`}>
+      <div className={styles.app__gallery_content}>
         <SubHeading title="Facebook" />
         <h1 className="headtext__cormorant">Photo Gallery</h1>
         <p
@@ -50,8 +51,8 @@ const Gallery = () => {
           View More
         </button>
       </div>
-      <div className="app__gallery-images">
-        <div className="app__gallery-images_container" ref={scrollRef}>
+      <div className={styles.app__gallery_images}>
+        <div className={styles.app__gallery_images_container} ref={scrollRef}>
           {[
             images.gallery01,
             images.gallery02,
@@ -59,21 +60,24 @@ const Gallery = () => {
             images.gallery04,
           ].map((image, index) => (
             <div
-              className="app__gallery-images_card flex__center"
+              className={`${styles.app__gallery_images_card} flex__center`}
               key={`gallery_image-${index + 1}`}
             >
-              <Image src={image} alt="gallery_image" />
-              <BsFacebook className="gallery__image-icon" />
+              <Image src={image} alt={styles.gallery_image} />
+              <BsFacebook
+                color="white"
+                className={styles.gallery__image_icon}
+              />
             </div>
           ))}
         </div>
-        <div className="app__gallery-images_arrows">
+        <div className={styles.app__gallery_images_arrows}>
           <BsArrowLeftShort
-            className="gallery__arrow-icon"
+            className={styles.gallery__arrow_icon}
             onClick={() => scroll('left')}
           />
           <BsArrowRightShort
-            className="gallery__arrow-icon"
+            className={styles.gallery__arrow_icon}
             onClick={() => scroll('right')}
           />
         </div>

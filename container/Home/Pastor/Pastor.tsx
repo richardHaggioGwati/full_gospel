@@ -2,28 +2,28 @@ import Image from 'next/image';
 
 import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
-import './Pastor.css';
+import styles from '../../Shared/ReverseHeader.module.css';
 
 const Pastor: React.FC = () => (
   <div className="app__bg app__wrapper section__padding">
     <div className="app__wrapper_img app__wrapper_img-reverse">
       <Image
-        src={images.chef}
+        src={images.pastor}
         style={{
           maxWidth: '100%',
           height: 'auto',
         }}
         width={500}
         height={908}
-        alt="chef_image"
+        alt="pastor_image"
       />
     </div>
     <div className="app__wrapper_info">
       <SubHeading title="Meet our Pastor" />
       <h1 className="headtext__cormorant">What we believe in</h1>
 
-      <div className="app__chef-content">
-        <div className="app__chef-content_quote">
+      <div className={styles.app__reverse_header_content}>
+        <div className={styles.app__reverse_header_content_quote}>
           <Image
             src={images.quote}
             style={{
@@ -46,7 +46,7 @@ const Pastor: React.FC = () => (
         </p>
       </div>
 
-      <div className="app__chef-sign">
+      <div className={styles.app__reverse_header_sign}>
         <p>Jack B. Chiwra</p>
         <p className="p__opensans">Senior Pastor</p>
         <Image

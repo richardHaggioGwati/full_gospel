@@ -2,13 +2,18 @@ import Image from 'next/image';
 import { SubHeading } from '../../../components';
 import { images } from '../../../constants';
 
-import './Header.css';
+import styles from '../../Shared/Header.module.css';
 
 const Header = () => (
-  <div className="app__header app__wrapper section__padding" id="home">
+  <div
+    className={`${styles.app__header} app__wrapper section__padding`}
+    id="home"
+  >
     <div className="app__wrapper_info">
       <SubHeading title="The Full Gospel Church" />
-      <h1 className="app__header-h1">Welcome To The Home of Jesus Christ</h1>
+      <h1 className={`${styles.app__header_h1}`}>
+        Welcome To The Home of Jesus Christ
+      </h1>
       <p className="p__opensans" style={{ margin: '2rem 0' }}>
         Where faith comes alive and community thrives. We are a congregation
         dedicated to spreading love, hope, and the teachings of Jesus Christ.
@@ -21,6 +26,7 @@ const Header = () => (
     <div className="app__wrapper_img">
       <Image
         src={images.welcome}
+        priority
         width={300}
         height={708}
         style={{
