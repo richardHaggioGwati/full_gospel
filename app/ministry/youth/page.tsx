@@ -1,7 +1,18 @@
 import '../../page.css';
+import {
+  YouthHeader,
+  YouthTestimonial,
+  YouthGallery,
+} from '../../../container/Ministry';
 
 const page = () => {
-  return <h1 style={{ color: 'white' }}>New Page</h1>;
+  return (
+    <>
+      <YouthHeader />
+      <YouthTestimonial />
+      <YouthGallery />
+    </>
+  );
 };
 
 export default page;

@@ -1,7 +1,18 @@
 import '../../page.css';
+import {
+  HelpHeader,
+  HelpTestimonial,
+  HelpGallery,
+} from '../../../container/Ministry';
 
 const page = () => {
-  return <h1 style={{ color: 'white' }}>hy</h1>;
+  return (
+    <>
+      <HelpHeader />
+      <HelpTestimonial />
+      <HelpGallery />
+    </>
+  );
 };
 
 export default page;

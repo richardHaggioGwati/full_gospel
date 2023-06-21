@@ -1,6 +1,6 @@
 import bg from '../assets/bg.png';
 import bible from '../assets/bible.png';
-import chef from '../assets/chef.png';
+import pastor from '../assets/pastor.png';
 import G from '../assets/G.png';
 import gallery01 from '../assets/gallery01.jpg';
 import gallery02 from '../assets/gallery02.jpg';
@@ -16,10 +16,11 @@ import quote from '../assets/quote.png';
 import about from '../assets/about.svg';
 import donate from '../assets/donate.svg';
 import banner from '../assets/testimonial/banner.jpg';
+import youth from '../assets/testimonial/youth.jpg';
 
 export default {
   bg,
-  chef,
+  pastor,
   bible,
   G,
   gallery01,
@@ -36,4 +37,5 @@ export default {
   about,
   donate,
   banner,
+  youth,
 };
