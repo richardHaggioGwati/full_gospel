@@ -1,6 +1,5 @@
 .container {
     display: grid;
     place-content: center;
-    margin:  0 4.5rem 4.5rem 4.5rem;
     padding: 0;
   }

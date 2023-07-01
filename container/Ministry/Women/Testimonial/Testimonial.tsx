@@ -1,4 +1,4 @@
-import styles from './Testimonial.module.css';
+import styles from '../../../Shared/Testimonial.module.css';
 import { TestimonialItem } from '../../../../components';
 import evangelismTestimonials from '../../../../constants/testimonial';
 
